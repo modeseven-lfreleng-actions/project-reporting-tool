@@ -199,14 +199,25 @@ filterwarnings = [
 
 # Coverage configuration
 [tool.coverage.run]
-source = ["src"]
+source = [
+    "lf_releng_project_reporting",
+    "api",
+    "cli",
+    "concurrency",
+    "config",
+    "domain",
+    "jjb_attribution",
+    "observability",
+    "performance",
+    "rendering",
+    "util",
+]
 branch = true
 parallel = true
 omit = [
     "*/tests/*",
     "*/test_*.py",
     "*/__pycache__/*",
-    "*/site-packages/*",
 ]
 
 [tool.coverage.report]
